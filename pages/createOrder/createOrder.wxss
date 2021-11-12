@@ -1,0 +1,342 @@
+/* pages/createOrder/createOrder.wxss */
+.top {
+  width: 100%;
+  height: 175rpx;
+  position: relative;
+}
+.top_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.top_back {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: 23rpx;
+  left: 30rpx;
+}
+.back_bg {
+  width: 100%;
+  height: 100%;
+}
+.top_text {
+  width: 310rpx;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC, PingFang SC-Medium;
+  font-weight: 500;
+  text-align: CENTER;
+  color: #ffffff;
+  position: absolute;
+  bottom: 18rpx;
+  left: 220rpx;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.userInfoContent {
+  width: 691rpx;
+  height: 296rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(40,121,11,0.10);
+  margin: 35rpx auto 0 auto;
+  overflow: hidden;
+}
+.userInfoTitile,.serviceTimeTitle,.serviceContentTitile,.orderInfoTitile {
+  width: 192rpx;
+  height: 40rpx;
+  margin: 22rpx 0 0 10rpx;
+  display: flex;
+  align-items: center;
+}
+.userInfo_bg,.serviceTime_bg,.serviceContent_bg,.orderInfo_bg {
+  width: 40rpx;
+  height: 40rpx;
+}
+.userInfoBg {
+  width: 100%;
+  height: 100%;
+}
+.serviceTimeBg {
+  width: 100%;
+  height: 100%;
+}
+.serviceContentBg {
+  width: 100%;
+  height: 100%;
+}
+.orderInfoBg {
+  width: 100%;
+  height: 100%;
+}
+.userInfoText,.serviceTimeText,.serviceContentText,.orderInfoText {
+  margin-left: 10rpx;
+  line-height: 45rpx;
+  font-size: 32rpx;
+  font-family: PingFang SC, PingFang SC-Medium;
+  font-weight: 600;
+  text-align: LEFT;
+  color: #333333;
+  letter-spacing: 0rpx;
+}
+.userInfoDetail {
+  width: 610rpx;
+  height: 201rpx;
+  margin: 12rpx 0 0 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.userName,.userCard,.serviceAddress,.contactPhone {
+  width: 620rpx;
+  height: 39rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.userNameText,.userCardText,.serviceText,.contactPhoneText {
+  width: 130rpx;
+  height: 39rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 500;
+  text-align: LEFT;
+  color: #404040;
+  letter-spacing: 3rpx;
+}
+.userNameInput,.userCardInput,.serviceInput,.contactPhoneInput {
+  width: 370rpx;
+  height: 36rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: right;
+  color: #666666;
+  letter-spacing: 0rpx;
+  line-height: 50rpx;
+  margin-top: 4rpx;
+}
+.serviceTime {
+  width: 691rpx;
+  height: 188rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(40,121,11,0.10);
+  margin: 20rpx auto 0 auto;
+  overflow: hidden;
+}
+.serviceContent {
+  width: 691rpx;
+  min-height: 250rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(40,121,11,0.10);
+  margin: 21rpx auto 0 auto;
+  overflow: hidden;
+}
+.serviceDetail {
+  width: 610rpx;
+  height: 93rpx;
+  margin: 12rpx 0 0 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.startTime,.endTime {
+  width: 610rpx;
+  height: 39rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.startTimeText,.endTimeText {
+  width: 124rpx;
+  height: 39rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: #404040;
+  letter-spacing: 0rpx;
+}
+.startSpecificTime,.endSpecificTime {
+  width: 165rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: right;
+  color: #666666;
+  letter-spacing: 0rpx;
+}
+.serviceType {
+  width: 400rpx;
+  min-height: 39rpx;
+  margin: 12rpx 0 0 60rpx;
+}
+.serviceItem {
+  width: 400rpx;
+  height: 39rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+}
+.otherChange {
+  width: 620rpx;
+  height: 39rpx;
+  margin-left: 60rpx;
+  display: flex;
+  align-items: center;
+}
+.itemChange {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 4rpx;
+  position: relative;
+}
+.itemChange2 {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 4rpx;
+  position: relative;
+}
+.itemChange_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.itemChange_bg2  {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.itemChange2 {
+  width: 28rpx;
+  height: 28rpx;
+}
+.itemInfo {
+  width: 350rpx;
+  height: 39rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: #404040;
+  letter-spacing: 0rpx;
+}
+.itemInfo2 {
+  width: 80rpx;
+  height: 39rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: #404040;
+  letter-spacing: 0rpx;
+  margin-left: 22rpx;
+}
+.phcolor{
+  color:#999999;
+}
+.otherInput {
+  min-width: 460rpx;
+  height: 39rpx;
+  font-size: 26rpx;
+  text-align: right;
+  margin-top: 4rpx;
+}
+.tui-picker-detail {
+  font-size: 26rpx;
+}
+.orderInfo {
+  width: 691rpx;
+  height: 242rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(40,121,11,0.10);
+  margin: 20rpx auto 0 auto;
+  overflow: hidden;
+}
+.orderInfoContent {
+  width: 601rpx;
+  height: 147rpx;
+  margin: 12rpx 0 0 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.wages,.serviceCost,.discountPrice {
+  width: 601rpx;
+  height: 39rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wagesText,.serviceCostText,.discountPriceText {
+  font-size: 30rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: #404040;
+  letter-spacing: 0rpx;
+}
+.wagesTime,.serviceCostTime,.discountPriceTime {
+  font-size: 24rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: right;
+  color: #666666;
+  letter-spacing: 0rpx;
+}
+.wagesTime input,.serviceCostTime input,.discountPriceTime input {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+}
+.paidMoneyContent {
+  width: 676rpx;
+  height: 120rpx;
+  margin: 50rpx auto 50rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.paidPriceContent {
+  width: 289rpx;
+  height: 39rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.paidPriceText {
+  width: 124rpx;
+  height: 39rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: #000000;
+  letter-spacing: 0rpx;
+}
+.paidPriceNumber {
+  width: 142rpx;
+  height: 39rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: #000000;
+  letter-spacing: 0rpx;
+}
+.paidMoneyBtn {
+  width: 361rpx;
+  height: 80rpx;
+}
+.paidMoney_bg {
+  width: 100%;
+  height: 100%;
+}

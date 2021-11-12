@@ -1,0 +1,35 @@
+<!--pages/phoneBind/phoneBind.wxml-->
+<view class="top">
+  <!-- 顶部图 -->
+  <image class="top_bg" src="../../assets/images/login/loginTitle.png"></image>
+  <view class="top_back">
+    <image class="back_bg" src="../../assets/images/login/back_bg.png"></image>
+  </view>
+  <view class="top_text">常客隆家政-业务端</view>
+</view>
+<view class="content">
+  <view class="login_bg">
+    <image class="loginPic" src="../../assets/images/login/login_bg.png"></image>
+  </view>
+  <view class="login_text">请绑定手机号</view>
+  <view class="login_detail">请绑定在公司后台录用的手机号</view>
+  <!-- 手机号 -->
+  <view class="login_phone">
+    <view class="phone_bg">
+      <image class="imagePhone" src="../../assets/images/login/imagePhone.png"></image>
+    </view>
+    <input type="number" class="phoneInput" placeholder="请输入手机号" bindinput="setPhoneInput" maxlength="11" value="{{phone}}" />
+  </view>
+  <!-- 验证码 -->
+  <view class="login_code">
+    <view class="code_bg">
+      <image class="imageCode" src="../../assets/images/login/imageCode.png"></image>
+    </view>
+    <input type="number" class="codeInput" placeholder="请输入验证码" value="{{msgCode}}" bindinput="setCodeInput" />
+    <view class="getCode" catchtap="sendCode">{{sendCodeText}}</view>
+  </view>
+  <!-- 完成绑定 -->
+  <view class="completeBtn" bindtap="getBindPhone">
+    <image class="completeBtn_bg" src="../../assets/images/login/completeBtn.png"></image>
+  </view>
+</view>

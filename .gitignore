@@ -1,0 +1,9 @@
+**.iml
+**.idea
+**/target
+**/node_modules
+**.classpath
+**.project
+**.settings
+
+/${sys:catalina.home}/*

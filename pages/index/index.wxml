@@ -1,0 +1,23 @@
+<!--pages/index/index.wxml-->
+<view class="top">
+  <!-- 顶部图 -->
+  <image class="top_bg" src="../../assets/images/login/loginTitle.png"></image>
+  <view class="top_back" bindtap="handTakeBack">
+    <image class="back_bg" src="../../assets/images/login/back_bg.png"></image>
+  </view>
+  <view class="top_text">常客隆家政-业务端</view>
+</view>
+<view class="content">
+  <!-- 创建订单 -->
+  <view class="createOrder" bindtap="createOrderBtn">
+    <image class="createOrder_bg" src="../../assets/images/login/createOrder.png"></image>
+  </view>
+  <!-- 未支付订单 -->
+  <view class="unpaidOrder" bindtap="noPaidOrder">
+    <image class="unpaidOrder_bg" src="../../assets/images/login/unpaidOrder.png"></image>
+  </view>
+  <!-- 已支付订单 -->
+  <view class="paidOrder" bindtap="paidOrder">
+    <image class="paidOrder_bg" src="../../assets/images/login/paidOrder.png"></image>
+  </view>
+</view>

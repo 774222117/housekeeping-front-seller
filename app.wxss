@@ -1,0 +1,13 @@
+/**app.wxss**/
+@import './style/btn.wxss';
+
+.container {
+  color: green;
+  font-size: 32px;
+}
+button {
+  background-color: #fff;
+}
+button::after{
+  border: none;
+}

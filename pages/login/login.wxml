@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view class="top">
+  <!-- 顶部图 -->
+  <image class="top_bg" src="../../assets/images/login/loginTitle.png"></image>
+  <view class="top_back">
+    <image class="back_bg" src="../../assets/images/login/back_bg.png"></image>
+  </view>
+  <view class="top_text">常客隆家政-业务端</view>
+</view>
+<view class="content">
+  <view class="login_bg">
+    <image class="loginPic" src="../../assets/images/login/login_bg.png"></image>
+  </view>
+  <view class="login_text">常客隆优选·高端家政</view>
+  <!-- 一键授权 -->
+  <button class="loginBtn"  bindtap="getUserProfile">
+    <image class="loginBtn_bg" src="../../assets/images/login/loginBtn.png"></image>
+  </button>
+
+</view>

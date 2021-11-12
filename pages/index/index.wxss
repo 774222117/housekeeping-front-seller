@@ -1,0 +1,75 @@
+/* pages/index/index.wxss */
+.top {
+  width: 100%;
+  height: 233rpx;
+  position: relative;
+}
+.top_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.top_back {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: 81rpx;
+  left: 30rpx;
+}
+.back_bg {
+  width: 100%;
+  height: 100%;
+}
+.top_text {
+  width: 310rpx;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC, PingFang SC-Medium;
+  font-weight: 500;
+  text-align: CENTER;
+  color: #ffffff;
+  position: absolute;
+  bottom: 81rpx;
+  left: 220rpx;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.createOrder {
+  width: 691rpx;
+  height: 238rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  left: 30rpx;
+  top: -20rpx;
+}
+.createOrder_bg {
+  width: 100%;
+  height: 100%;
+}
+.unpaidOrder {
+  width: 691rpx;
+  height: 238rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 236rpx;
+}
+.unpaidOrder_bg {
+  width: 100%;
+  height: 100%;
+}
+.paidOrder {
+  width: 691rpx;
+  height: 238rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 494rpx;
+}
+.paidOrder_bg {
+  width: 100%;
+  height: 100%;
+}

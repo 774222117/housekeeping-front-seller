@@ -1,0 +1,142 @@
+<!--pages/createOrder/createOrder.wxml-->
+<view class="top">
+  <!-- 顶部图 -->
+  <image class="top_bg" src="../../assets/images/login/loginTitle.png"></image>
+  <view class="top_back" bindtap="takeBack">
+    <image class="back_bg" src="../../assets/images/login/back_bg.png"></image>
+  </view>
+  <view class="top_text">生成订单及合同</view>
+</view>
+<view class="content">
+  <!-- 顾客信息 -->
+  <view class="userInfoContent">
+    <view class="userInfoTitile">
+      <view class="userInfo_bg">
+        <image class="userInfoBg" src="../../assets/images/login/userInfoBg.png"></image>
+      </view>
+      <view class="userInfoText">顾客信息</view>
+    </view>
+    <view class="userInfoDetail">
+      <!-- 用户姓名 -->
+      <view class="userName">
+        <view class="userNameText">甲方姓名</view>
+        <input type="text" class="userNameInput" placeholder="请输入姓名" value="{{customerName}}" bindinput="getUserName"/>
+      </view>
+      <!-- 身份证 -->
+      <view class="userCard">
+        <view class="userCardText">身份证号</view>
+        <input type="text" class="userCardInput" placeholder="请输入身份证号" value="{{identityCard}}" bindinput="getUseridCard"/>
+      </view>
+      <!-- 服务地址 -->
+      <view class="serviceAddress">
+        <view class="serviceText">服务地址</view>
+        <input type="text" class="serviceInput" placeholder="请录入服务地址" value="{{detailInfo}}" bindinput="getUserAddress"/>
+      </view>
+      <!-- 联系电话 -->
+      <view class="contactPhone">
+        <view class="contactPhoneText">联系电话</view>
+        <input type="text" class="contactPhoneInput" placeholder="请填写联系电话" value="{{phone}}" bindinput="getUserPhone"/>
+      </view>
+    </view>
+  </view>
+  <!-- 服务时间 -->
+  <view class="serviceTime">
+    <view class="serviceTimeTitle">
+      <view class="serviceTime_bg">
+        <image class="serviceTimeBg" src="../../assets/images/login/serviceTimeBg.png"></image>
+      </view>
+      <view class="serviceTimeText">服务时间</view>
+    </view>
+    <view class="serviceDetail">
+      <view class="startTime">
+        <view class="startTimeText">开始时间</view>
+        <view class="startSpecificTime">
+          <picker mode="date" value="{{startTime}}" start="2021-10-01" end="2099-12-31" fields="day" bindchange="changeDate1">
+            <view class="tui-picker-detail">
+              {{startTime}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="endTime">
+        <view class="endTimeText">结束时间</view>
+        <view class="endSpecificTime">
+          <picker mode="date" value="{{finishTime}}" start="2021-10-01" end="2099-12-31" fields="day" bindchange="changeDate2">
+            <view class="tui-picker-detail">
+              {{finishTime}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 服务内容 -->
+  <view class="serviceContent">
+    <view class="serviceContentTitile">
+      <view class="serviceContent_bg">
+        <image class="serviceContentBg" src="../../assets/images/login/serviceTimeBg.png"></image>
+      </view>
+      <view class="serviceContentText">服务内容</view>
+    </view>
+    <view class="serviceType">
+      <view class="serviceItem" wx:for="{{serviceDetail}}" wx:key="index">
+        <view class="itemChange" wx:if="{{serviceDetail[index].type}}" bindtap="serviceClick1" data-index='{{index}}'>
+          <image class="itemChange_bg" src="../../assets/images/login/change.png"></image>
+        </view>
+        <view class="itemChange2" wx:else bindtap="serviceClick2" data-index='{{index}}'>
+          <image class="itemChange_bg2" src="../../assets/images/login/change2.png"></image>
+        </view>
+        <view class="itemInfo">{{item.name}}</view>
+      </view>
+    </view>
+    <view class="otherChange">
+      <view class="itemChange" wx:if="{{changeService}}" bindtap="clickOther1">
+        <image class="itemChange_bg" src="../../assets/images/login/change2.png"></image>
+      </view>
+      <view class="itemChange2" wx:else bindtap="clickOther2">
+        <image class="itemChange_bg2" src="../../assets/images/login/change.png"></image>
+      </view>
+      <view class="itemInfo2">其他:</view>
+      <input type="text" class="otherInput" bindinput="otherService" value="{{otherService}}" placeholder="请填写其他服务内容" placeholder-class="phcolor"/>
+    </view>
+  </view>
+  <!-- 订单信息 -->
+  <view class="orderInfo">
+    <view class="orderInfoTitile">
+      <view class="orderInfo_bg">
+        <image class="orderInfoBg" src="../../assets/images/login/orderInfoBg.png"></image>
+      </view>
+      <view class="orderInfoText">订单信息</view>
+    </view>
+    <view class="orderInfoContent">
+      <view class="wages">
+          <view class="wagesText">保姆薪资</view>
+          <view class="wagesTime">
+            <input type="number" value="{{nannySalary}}" bindinput="getNannySalary" placeholder="请输入金额"/>
+          </view>
+      </view>
+      <view class="serviceCost">
+          <view class="serviceCostText">服务费</view>
+          <view class="serviceCostTime">
+            <input type="number" value="{{agencyFeeA}}" bindinput="getAgencyFeeA" placeholder="请输入金额"/>
+          </view>
+      </view>
+      <view class="discountPrice">
+          <view class="discountPriceText">优惠金额</view>
+          <view class="discountPriceTime">
+            <input type="number" value="{{discountPrice}}" bindinput="getDiscountPrice" placeholder="请输入金额"/>
+          </view>
+      </view>
+    </view>
+  </view>
+  <!-- 订单金额和支付按钮 -->
+  <view class="paidMoneyContent">
+    <view class="paidPriceContent">
+      <view class="paidPriceText">订单金额</view>
+      <view class="paidMoneyNumber">￥{{nannySalary + agencyFeeA - discountPrice}}</view>
+    </view>
+    <view class="paidMoneyBtn" bindtap="readyOrderBtn">
+      <image class="paidMoney_bg" src="../../assets/images/login/finishPic.png"></image>
+    </view>
+  </view>
+</view>

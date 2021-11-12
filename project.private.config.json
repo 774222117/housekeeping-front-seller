@@ -1,0 +1,89 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "登陆",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "绑定手机",
+          "pathName": "pages/phoneBind/phoneBind",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单列表",
+          "pathName": "pages/orderList/orderList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "创建订单",
+          "pathName": "pages/createOrder/createOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderList/orderList",
+          "pathName": "pages/orderList/orderList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/createOrder/createOrder",
+          "pathName": "pages/createOrder/createOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/phoneBind/phoneBind",
+          "pathName": "pages/phoneBind/phoneBind",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderList/orderList",
+          "pathName": "pages/orderList/orderList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/phoneBind/phoneBind",
+          "pathName": "pages/phoneBind/phoneBind",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

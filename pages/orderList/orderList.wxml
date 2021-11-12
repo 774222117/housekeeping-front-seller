@@ -1,0 +1,55 @@
+<!--pages/orderList/orderList.wxml-->
+<wxs module="unit" src="../../utils/unit.wxs"></wxs>
+<view class="top">
+  <!-- 顶部图 -->
+  <image class="top_bg" src="../../assets/images/login/loginTitle.png"></image>
+  <view class="top_back" bindtap="takeBack">
+    <image class="back_bg" src="../../assets/images/login/back_bg.png"></image>
+  </view>
+  <view class="top_text">订单列表</view>
+</view>
+<view class="content">
+  <!-- 顶部切换 -->
+  <view class="listTitleContent">
+    <view class="listTitle">
+      <text class="listTitleItem  {{currentIndex == index ? 'isActive' : ''}}" wx:for="{{['所有订单','未支付','已支付']}}" data-index='{{index}}' bindtap="titileItemClick" wx:key='index'>{{item}}</text>
+      <view class="bottomLine1"></view>
+    </view>
+  </view>
+  <!-- 订单详情 -->
+  <view class="orderDetailContent" wx:for="{{nowOrderList}}" wx:key='index'>
+    <view class="detailTitle">
+      <!-- 订单号 -->
+      <view class="detailOrderNumber">订单号：{{item.ordersn}}</view>
+      <!-- 支付状态 -->
+      <view class="orderState" wx:if="{{item.payStatus == 0}}">未支付</view>
+      <view class="orderState successPay" wx:if="{{item.payStatus == 2}}">已支付</view>
+    </view>
+    <view class="detailUserContent">
+        <!-- 用户姓名和电话 -->
+        <view class="detailUserInfo">
+          <view class="userName">姓名：{{item.customerName}}</view>
+          <view class="userPhone">电话：{{item.phone}}</view>
+        </view>
+        <!-- 用户工作内容 -->
+        <view class="userWorkContent">{{item.serviceItem}}</view>
+        <!-- 工作时间 -->
+        <view class="workTime">
+          <view class="workTimeBg">
+            <image class="workTime_bg" src="../../assets/images/login/workTime.png"></image>
+          </view>
+          <view class="workTimeNumber">{{item.startTime}} ~ {{item.finishTime}}</view>
+        </view>
+    </view>
+    <!-- 价格 -->
+    <view class="detailPriceContent">
+      <view class="totalPrice">共 ¥{{unit.formatNum(item.payPrice)}}</view>
+      <view class="totalRecord" bindtap="editOrder" data-ordersn="{{item.ordersn}}">
+        <image class="totalRecord_bg" src="../../assets/images/login/record.png"></image>
+      </view>
+      <view class="share" bindtap="shareOrder" data-ordersn="{{item.ordersn}}">
+        <image class="share_bg" src="../../assets/images/login/share.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
